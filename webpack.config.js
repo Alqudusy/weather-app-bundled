@@ -27,8 +27,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // Adjust if your HTML file is in a different location
-    }),
+        template: './src/index.html', // This points to the source HTML file
+        filename: 'index.html', // This makes sure the output file is index.html
+      }),
     new webpack.DefinePlugin({
       'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
     }),
