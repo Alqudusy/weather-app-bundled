@@ -1,0 +1,159 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #ffcc70, #c850c0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(-50px);
+    animation: slideIn 0.6s forwards;
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+
+/* Search Box Styling */
+.search-box {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 70%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff6600;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #cc5200;
+    transform: translateY(-3px);
+}
+
+/* Weather Card Styling */
+.weather-card {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.weather-icon img {
+    width: 80px;
+    height: 80px;
+    margin: 20px 0;
+    transition: transform 0.4s ease-in-out;
+}
+
+.weather-icon img:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.city-name {
+    font-size: 1.8em;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.temperature {
+    font-size: 3em;
+    color: #333;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 1.2em;
+    color: #666;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.details {
+    font-size: 1em;
+    color: #444;
+    margin-top: 15px;
+}
+
+.min-max {
+    font-size: 1.1em;
+}
+
+.humidity {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* Hover Animation */
+.container:hover {
+    transform: scale(1.02) rotate(1deg);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    input, button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .weather-card {
+        margin-top: 20px;
+    }
+}
