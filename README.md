@@ -107,5 +107,3 @@ This project uses **Webpack** for module bundling, including:
 This project is open-source and available under the [MIT License](LICENSE).
 
 ---
-
-This README should give a clear idea of the project’s purpose, structure, and how to get it up and running. Be sure to replace `"your-username"` with your actual GitHub username in the repository URL, and customize any parts as necessary.
